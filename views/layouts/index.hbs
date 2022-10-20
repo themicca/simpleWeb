@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>{{title}}</title>
+</head>
+<body>
+<header></header>
+<div id="menu">
+    <form id="loginPage" method="post" action="/login">
+        <input type="submit" value="Login">
+    </form>
+    <form id="registerPage" method="post" action="/reg">
+        <input type="submit" value="Sign Up">
+    </form>
+    <form id="registerAddressPage" method="post" action="/regAddress">
+        <input type="submit" value="New Address">
+    </form>
+    <form id="home" method="post" action="/home">
+        <input type="submit" value="Home">
+    </form>
+    <form id="logout" method="post" action="/logout">
+        <input type="submit" value="Log Out">
+    </form>
+</div>
+{{{body}}}
+</body>
+</html>

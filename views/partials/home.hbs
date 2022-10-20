@@ -1,0 +1,64 @@
+<div id="userInfo">
+    <h1>User Info</h1>
+    <p>Nickname: {{user.nickname}}</p>
+    <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+    <h2>Your Contacts:</h2>
+    {{#each contacts}}
+        <p><b>Type:</b> {{this.name}}</p>
+        <p><b>Contact Info:</b> {{this.contact}}</p><br>
+    {{/each}}
+    <h2>Your Relations:</h2>
+    {{#each relations}}
+        <p><b>With:</b> {{this.nickname}}</p>
+        <p><b>Relation Description:</b> {{this.description}}</p>
+        <p><b>Relation Type:</b> {{this.name}}</p><br>
+    {{/each}}
+    <h2>Your Meetings:</h2>
+    {{#each meetings}}
+        <p><b>Type:</b> {{this.start}}</p>
+        <p><b>Contact Info:</b> {{this.duration}}</p>
+        <p><b>Type:</b> {{this.description}}</p><br>
+    {{/each}}
+</div>
+<form id="contact" method="post" action="/addContact">
+    <h3>Add a contact</h3>
+    <label for="contactType">Contact type:</label>
+    <input type="text" id="contactType" name="contactType"><br>
+    <label for="contactDesc">Contact description:</label>
+    <input type="text" id="contactDesc" name="contactDesc"><br>
+    <input type="submit" id="addContactSubmit" value="Add Contact">
+</form>
+<form id="relation" method="post" action="/relation">
+    <h3>Make a relation</h3>
+    <label for="person">Person to have a relation with:</label>
+    <select id="person" name="person">
+        {{#each userList}}
+            <option value="{{this.nickname}}">{{this.nickname}}</option>
+        {{/each}}
+    </select><br>
+    <label for="relationType">Type of the relation:</label>
+    <input type="text" id="relationType" name="relationType"><br>
+    <label for="relationDesc">Description of the relation:</label>
+    <input type="text" id="relationDesc" name="relationDesc"><br>
+    <input type="submit" id="makeRelation" value="Make Relation">
+</form>
+<form id="meeting" method="post" action="/meeting">
+    <h3>Schedule a new meeting</h3>
+    <label for="meetingStart">Start of the meeting:</label>
+    <input type="date" id="meetingStart" name="meetingStart"><br>
+    <label for="meetingDuration">Meeting duration:</label>
+    <input type="time" id="meetingDuration" name="meetingDuration"><br>
+    <label for="meetingLocation">Meeting location:</label>
+    <select id="meetingLocation" name="meetingLocation">
+        {{#each meetingLoc}}
+            <option value="{{this.city}}">{{this.city}}</option>
+        {{/each}}
+    </select><br>
+    <label for="meetingDesc">Description of the meeting:</label>
+    <input type="text" id="meetingDesc" name="meetingDesc"><br>
+    <input type="submit" id="meetingSubmit" value="Schedule Meeting">
+</form><br>
+<form id="listOfMeetings" method="post" action="/meetings">
+    <h3>Join an already scheduled meeting</h3>
+    <input type="submit" id="listOfMeetingsSubmit" value="Show meetings to join">
+</form>

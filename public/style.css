@@ -1,0 +1,29 @@
+body {background: #e8ffb3;}
+header {background-color: cornflowerblue;height: 300px; width: 80%; margin: auto}
+
+form {display: inline-block;color:white;text-align:center;background:cornflowerblue}
+label {display: inherit;line-height:1.5vw;margin:3px;}
+span {display: inherit;line-height:1.5vw;}
+input {display: inherit;width:200px;height:1.5vw;margin:3px;}
+
+[type="radio"] {float: left;}
+[type="checkbox"] {float: left; width: 60px; height: 60px;}
+#login {width: 400px;margin-left: 40%;margin-top: 80px}
+#loginSubmit {width: 80px}
+
+#register {width: 400px;margin-left: 40%;margin-top: 80px}
+#registerAddress {width: 400px;margin-left: 40%;margin-top: 80px}
+
+#menu {position: sticky; top: 0; margin-left: 20%;}
+div form {display: inline-block;width: 200px}
+div form input {color: white;font-size: 20px;background-color: cadetblue;width:200px;height: 50px;margin: 0px;}
+
+#userInfo {color: white;background-color: cornflowerblue;margin-right: 10%;margin-left: 10%; margin-top: 70px;font-size: 20px}
+#logoutInfo {color: white;background-color: cornflowerblue;margin-right: 10%;margin-left: 10%; margin-top: 70px;height: 50px;font-size: 20px}
+#contact {margin-left: 10%;font-size: 18px}
+#relation {font-size: 18px}
+#meeting {font-size: 18px; margin-top: 20px;}
+#listOfMeetings {margin-right: 10%;margin-left: 10%; margin-top: 30px;font-size: 18px}
+#meetings {width: 80%; margin: auto; font-size: 18px;}
+#joinMeeting {width: 80%}
+#noReg {width: 400px;margin-left: 40%; margin-top: 20px}

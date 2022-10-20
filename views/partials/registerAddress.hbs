@@ -1,0 +1,16 @@
+<form id="registerAddress" method="POST" action="/registerAddress">
+    <label for="city">City:</label>
+    <input type="text" name="city" id="city" value="City" required><br><br>
+    <label for="streetName">Street Name:</label>
+    <input type="text" name="streetName" id="streetName" value="Street Name" required><br><br>
+    <label for="streetNumber">Street Number:</label>
+    <input type="number" name="streetNumber" id="streetNumber" value="5" required><br><br>
+    <label for="postal">Postal Code:</label>
+    <input type="number" name="postal" id="postal" maxlength="5" value="96010" required><br><br>
+    <label for="country">Country:</label>
+    <input type="text" name="country" id="country" value="Czechia" required><br><br>
+    <input type="submit" id="loginSubmit" value="Submit">
+</form><br>
+<form id="noReg" method="post" action="/home">
+    <input type="submit" value="Go Back">
+</form>

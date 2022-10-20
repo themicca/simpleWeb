@@ -1,0 +1,24 @@
+<form id="register" method="post" action="/register">
+    <label for="nickname">Nickname:</label>
+    <input type="text" name="nickname" id="nickname" value="micca" required><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" value="pass" required><br>
+    <label for="firstname">First Name:</label>
+    <input type="text" name="firstname" id="firstname" value="Michael" required><br>
+    <label for="lastname">Last Name:</label>
+    <input type="text" name="lastname" id="lastname" value="Konecny" required><br>
+    <label for="birthday">Birthday:</label>
+    <input type="date" name="birthday" id="birthday" value="2020-05-05" required><br>
+    <label for="height">Height:</label>
+    <input type="number" name="height" id="height" value="50" required><br>
+    <section class="genders">
+        <span>Gender:</span><br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="undefined" value="undefined" checked>
+        <label for="undefined">Undefined</label>
+    </section><br>
+    <input type="submit" id="loginSubmit" value="Submit">
+</form>

@@ -1,0 +1,20 @@
+<div id="meetings">
+    {{#if meetings}}
+        <form id="joinMeeting" method="post" action="/joinMeeting">
+        {{#each meetings}}
+            <input type="checkbox" name="{{this.id_meeting}}" id="{{this.id_meeting}}" value="{{this.id_meeting}}">
+            <label for="{{this.id_meeting}}">
+                Start:{{this.start}}<br>
+                Duration: {{this.duration}}<br>
+                Description: {{this.description}}
+            </label><br>
+        {{/each}}
+            <input type="submit" id="joinMeetingSubmit" value="Join meetings">
+        </form>
+    {{else}}
+        <p>There are currently no meetings scheduled you haven't joined yet.</p>
+    {{/if}}<br>
+    <form id="noMeeting" method="post" action="/home">
+        <input type="submit" id="noMeetingSubmit" value="Go Back">
+    </form>
+</div>
